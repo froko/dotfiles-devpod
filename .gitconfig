@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = github@frokonet.ch
+	name = Patrick Ineichen
+[safe]
+  directory = *
