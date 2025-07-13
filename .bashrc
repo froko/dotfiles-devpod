@@ -1,3 +1,5 @@
+export PATH="$HOME/.nix-profile/bin:$PATH"
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -27,13 +29,6 @@ alias c="clear"
 alias h="cd ~"
 alias v="nvim"
 alias t="tmux"
-alias e="yazi"
 alias lg="lazygit"
 
 eval "$(fzf --bash)"
-
-export PNPM_HOME="/home/vscode/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
