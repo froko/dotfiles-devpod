@@ -11,9 +11,11 @@ echo "All dotfiles linked successfully!"
 packages=(
   fd
   fzf
-  lazygit
   ripgrep
   starship
+  neovim
+  tmux
+  lazygit
 )
 
 for package in "${packages[@]}"; do
