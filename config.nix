@@ -4,6 +4,7 @@
       name = "froko-tools";
       paths = [
         starship
+        eza
         fd
         fzf
         ripgrep

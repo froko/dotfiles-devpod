@@ -13,3 +13,7 @@ echo "All dotfiles linked successfully!"
 nix-env -iA nixpkgs.myPackages
 
 echo "All packages installed successfully!"
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+echo "tmux plugin manager installed successfully!"
