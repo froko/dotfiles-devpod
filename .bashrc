@@ -1,5 +1,3 @@
-export PATH="$HOME/.nix-profile/bin:$PATH"
-
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000

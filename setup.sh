@@ -1,16 +1,27 @@
 #!/bin/bash
 export XDG_CONFIG_HOME="$HOME"/.config
 mkdir -p "$XDG_CONFIG_HOME"
-mkdir -p "$XDG_CONFIG_HOME"/nixpkgs
 
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 ln -sf "$PWD/tmux" "$XDG_CONFIG_HOME"/tmux
-ln -sf "$PWD/config.nix" "$XDG_CONFIG_HOME"/nixpkgs/config.nix
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 
 echo "All dotfiles linked successfully!"
 
-nix-env -iA nixpkgs.myPackages
+packages=(
+  starship
+  eza
+  fd
+  fzf
+  ripgrep
+  lazygit
+  neovim
+  tmux
+)
+
+for package in "${packages[@]}"; do
+  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
+done
 
 echo "All packages installed successfully!"
 
